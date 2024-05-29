@@ -1,0 +1,98 @@
+% !TeX spellcheck = en_US
+% !TeX encoding = UTF-8
+% !TeX root = thesis.tex
+
+\newcommand{\experienceyearwidth}{1.5cm}
+\newcommand{\experiencemonthwidth}{1.1cm}
+\newcommand{\experience}[7]{%
+    \noindent
+	\begin{tabular}{@{} p{\experiencemonthwidth} @{} p{\experienceyearwidth} @{} p{\dimexpr\linewidth - \experienceyearwidth - \experiencemonthwidth\relax} @{}}
+		{\leavevmode #1} & {\leavevmode #2} & {\leavevmode #5} \hfill \emph{\leavevmode #6} \\
+		{\leavevmode #3} & {\leavevmode #4} & {\leavevmode #7} \\
+	\end{tabular}
+    \vspace{.3em}
+}
+\newcommand{\experienceShort}[4]{%
+    \noindent
+	\begin{tabular}{@{} p{\experiencemonthwidth} @{} p{\experienceyearwidth} @{} p{\dimexpr\linewidth - \experienceyearwidth - \experiencemonthwidth\relax} @{}}
+		{\leavevmode #1} & {\leavevmode #2} & {\leavevmode #3} \hfill \emph{\leavevmode #4} \\
+	\end{tabular}
+    \vspace{-.9em}
+}
+\newcommand{\teaching}[3]{%
+    \noindent
+	\begin{tabular}{@{} p{\linewidth} @{}}
+		{\leavevmode #1} \hfill \emph{\leavevmode #2} \\
+		{\leavevmode #3} \\
+	\end{tabular}
+    \vspace{.3em}
+}
+
+\chapter{Curriculum Vit\ae}
+
+\begin{tabular}{@{} p{\dimexpr \experienceyearwidth + \experiencemonthwidth\relax} @{} l}
+    Name & Donald Duck \\
+    ORCID & \href{https://orcid.org/...}{...} \\
+    Website & \url{https://...} \\
+    Citizenship & ...
+\end{tabular}
+
+\section*{Education}
+
+\experience
+	{Nov.}{2021 --}{June}{2024}
+	{Ph.D. in Computer Science}
+	{University of St.\,Gallen, Switzerland}
+	{Thesis title: Unicorn Dreams.
+    Advisor: Prof. Dr. Albert Bob.}
+
+\experienceShort
+	{June}{2013}
+	{Stuff without second line}
+	{Marshmallow, Rainbow}
+
+\section*{Work Experience}
+
+\experience
+    {Nov.}{2021 --}{June}{2024}
+    {Research Assistant}
+    {University of St.\,Gallen, Switzerland}
+    {A Group led by Prof. Dr. Albert Bob.}
+
+\section*{Summer Schools}
+
+
+\section*{Awards}
+
+...
+
+\section*{Service to the Research Community}
+
+\experienceShort{Since}{2020}{Active (shadow) reviewer in %for journals, conferences, and workshops in
+the ACM and IEEE Software Engineering and Programming Languages research communities.
+\vspace{1em}}{}
+    
+\experienceShort
+    {Oct.}{2023}
+    {Student Volunteer at COOLCONF 2023}
+    {Cool Place, Great Country}
+
+\section*{Student Supervision}
+
+...
+
+\section*{Teaching Experience}
+
+\teaching
+    {Teaching Assistant (exercises, projects, and exams)}
+    {University of St.\,Gallen, Switzerland}
+    {Lecture: Programming Methodology. \hfill Spring~2023: \textasciitilde30 students.}
+
+\section*{Publications}
+
+The most significant publications so far:
+
+\begin{itemize}[leftmargin=3em]
+    \item[\cite{Sokolowski2024Automated}] % get/setmaxcitenames dance ensures that all authors are printed
+        \numdef{\origmaxcitenames}{\getmaxcitenames{}}\setmaxcitenames{99}\fullcite{Sokolowski2024Automated}\setmaxcitenames{\origmaxcitenames}
+\end{itemize}
